@@ -1,9 +1,11 @@
 // Daniel Shiffman
+// Daniel Shiffman
 // https://www.kadenze.com/courses/the-nature-of-code
 // http://natureofcode.com/
 // Session 2: Array of Particles, multiple forces
 
 var particles = [];
+var person; 
 
 function setup() {
   createCanvas(640, 360);
@@ -23,6 +25,8 @@ function keyPressed() {
 
 function draw() {
   background(51);
+	person[i].update();
+	person[i].display();
   var wind = createVector(0.1, 0);
 
   for (var i = 0; i < particles.length; i++) {
