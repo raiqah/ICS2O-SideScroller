@@ -3,11 +3,11 @@
 // http://natureofcode.com/
 // Session 2: Array of Particles, multiple forces
 
-function Particle(x, y, m) {
-  this.pos = createVector(x, y);
-  this.vel = createVector(0, 0);
+function Person() {
+  this.pos = createVector(50, height);
+  this.vel = createVector(1, 0);
   this.acc = createVector(0, 0);
-  this.mass = m;
+
 
   this.applyForce = function(force) {
     var f = force.copy();
@@ -24,7 +24,7 @@ function Particle(x, y, m) {
   this.display = function() {
     fill(255, 150);
     stroke(255);
-    rect(this.pos.x, this.pos.y, this.mass*10, this.mass*10);
+    rect(this.pos.x, this.pos.y-50, 20, 50);
   }
 
   this.edges = function() {
