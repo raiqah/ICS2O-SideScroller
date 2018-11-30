@@ -14,7 +14,7 @@ background(51);
 	if (mouseIsPressed){
 			var force= createVector (-0.1, 0);
 	man.applyForce(force);
-	};
+	}
 	
 
 	translate(-man.pos.x+50,0);
